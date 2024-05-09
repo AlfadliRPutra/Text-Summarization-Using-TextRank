@@ -121,6 +121,9 @@ def get_sentences(graf):
         kalimat = node[1]['kalimat']
         sentences.append(kalimat)
     return '. '.join(sentences).replace('.', '. ')  # Menambahkan spasi setelah setiap titik
+    if result and not result.endswith('.'):
+        result += '.'  # Menambahkan titik di akhir jika belum ada
+    return result
 
 # Summarize text
 def summarize_text(text):
