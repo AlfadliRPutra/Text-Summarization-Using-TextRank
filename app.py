@@ -45,8 +45,8 @@ def main():
         navigate_to_contact()
 
 def navigate_to_home():
-    col1, col2, col3 = st.columns([1, 2, 1])  # Menentukan lebar kolom
-    col2.markdown("<div class='welcome-text'>Selamat datang di Aplikasi NLP!</div>", unsafe_allow_html=True)
+    col1, col2= st.columns([2, 1])  # Menentukan lebar kolom
+    col1.markdown("<div class='welcome-text'>Selamat datang di Aplikasi NLP!</div>", unsafe_allow_html=True)
     with col2:
         st.write("")  # Spasi kosong untuk memberi ruang antara teks dan tombol
         if st.button("Navigate to Summary"):
