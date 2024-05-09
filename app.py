@@ -46,6 +46,14 @@ def main():
     .content {
         margin: 0 150px;  /* Tambahkan margin kiri dan kanan sebesar 50px */
     }
+    /* Adjust subheader size for summary */
+    .summary-subheader {
+        font-size: 24px;
+    }
+    /* Adjust instruction text size for textarea */
+    .textarea-instruction {
+        font-size: 18px;
+    }
     </style>""", unsafe_allow_html=True)
     
     # Navigasi ke menu yang dipilih
@@ -73,7 +81,8 @@ def navigate_to_summary():
     # Input teks pengguna
     input_text = st.text_area("Masukkan teks untuk diringkas", height=250, 
                               max_chars=10000, 
-                              help="Anda dapat mengetik teks di sini")
+                              help="Anda dapat mengetik teks di sini", 
+                              key="summary_input")
 
     # Tombol untuk memproses teks
     if st.button("Kirim", 
@@ -81,7 +90,7 @@ def navigate_to_summary():
                  key="summarize_button"):
         if input_text:
             summary = summarize_text(input_text)
-            st.subheader("Ringkasan:")
+            st.markdown("<div class='summary-subheader'>Ringkasan:</div>", unsafe_allow_html=True)
             st.write(summary)
         else:
             st.warning("Masukkan teks terlebih dahulu")
