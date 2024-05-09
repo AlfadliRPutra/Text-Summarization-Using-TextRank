@@ -45,8 +45,6 @@ def preprocess(pre1):
 
 
 
-hasil_pre = pre1.apply(preprocess)
-
 def create_graph(sentences, preprocessed_sentences):
   graph = nx.Graph()
 
