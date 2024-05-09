@@ -51,4 +51,5 @@ def navigate_to_summary():
             st.warning("Masukkan teks terlebih dahulu")
 
 if __name__ == "__main__":
+    st.set_page_config(layout='wide')  # Set layout ke 'wide' untuk full screen
     main()
