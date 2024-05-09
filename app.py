@@ -167,7 +167,7 @@ def summarize_text(text):
 
 # Antarmuka pengguna Streamlit
 def main():
-    st.title("Sistem Tekstualisasi")
+    st.title("Peringkas Teks")
 
     # Input teks pengguna
     input_text = st.text_area("Masukkan teks untuk diringkas")
