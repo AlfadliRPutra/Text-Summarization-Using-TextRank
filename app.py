@@ -1,4 +1,5 @@
 import streamlit as st
+import hydralit_components as hc
 from text_processing import summarize_text
 
 def main():
@@ -17,7 +18,15 @@ def main():
     }
     </style>""", unsafe_allow_html=True)
     st.markdown("---")  # Garis pemisah
-
+    
+    # Navbar
+    menu_data = [
+        {'icon': "fas fa-home", 'label': "Beranda"},
+        {'icon': "fas fa-book", 'label': "Tentang"},
+        {'icon': "fas fa-envelope", 'label': "Kontak"}
+    ]
+    hc.nav_bar(menu_definition=menu_data, sticky_nav=True, sticky_mode='pinned')
+    
     # Input teks pengguna
     input_text = st.text_area("Masukkan teks untuk diringkas", height=200, 
                               max_chars=10000, 
