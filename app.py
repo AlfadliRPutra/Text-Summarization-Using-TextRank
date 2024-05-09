@@ -40,10 +40,6 @@ def preprocess(pre1):
   return hasil
 
 
-pre1 = split_text(teks)
-hasil_pre = preprocess(pre1)
-print(hasil_pre)
-
 import networkx as nx
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
