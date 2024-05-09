@@ -128,15 +128,6 @@ def textrank(graph, d=0.85):
 
 
 
-for node in result:
-  print('simpul', node[0])
-  print('nilai textrank:', node[1]['nilai'])
-  # print('nilai textrank:', node[1]['nilai'])
-  print()
-
-
-
-
 def descending_sort(node):
     for t in range(0, len(node)):
         temp = t
