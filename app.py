@@ -40,6 +40,9 @@ def main():
         margin-top: 50px;
         color: #888888;
     }
+    .content {
+        margin: 0 40px;  /* Tambahkan margin kiri dan kanan sebesar 50px */
+    }
     </style>""", unsafe_allow_html=True)
     
     # Navigasi ke menu yang dipilih
@@ -59,6 +62,7 @@ def navigate_to_home():
     with col2:
         st.write("")  # Spasi kosong untuk memberi ruang antara teks dan tombol
         st.markdown("<div class='centered-button'><button class='stButton'>Navigate to Summary</button></div>", unsafe_allow_html=True)
+    add_margin()
     add_copyright()
 
 
@@ -78,18 +82,23 @@ def navigate_to_summary():
             st.write(summary)
         else:
             st.warning("Masukkan teks terlebih dahulu")
-    
+    add_margin()
     add_copyright()
 
 def navigate_to_about():
     st.write("Ini adalah halaman Tentang")
     st.write("Tambahkan konten Tentang di sini")
+    add_margin()
     add_copyright()
 
 def navigate_to_contact():
     st.write("Ini adalah halaman Kontak")
     st.write("Tambahkan konten Kontak di sini")
+    add_margin()
     add_copyright()
+
+def add_margin():
+    st.markdown("<div class='content'></div>", unsafe_allow_html=True)
 
 def add_copyright():
     st.markdown("<div class='copyright'>© 2024 Alfadli R. P</div>", unsafe_allow_html=True)
