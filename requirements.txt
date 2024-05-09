@@ -7,3 +7,4 @@ matplotlib==3.7.1
 numpy==1.23.5
 pip==23.1.2
 scikit-learn==1.4.2
+hydralit_components>=1.0.0
