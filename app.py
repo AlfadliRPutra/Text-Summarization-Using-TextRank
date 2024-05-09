@@ -23,6 +23,13 @@ def main():
     .stButton>button {
         background-color: #008080;
         color: white;
+        width: 200px;  /* Lebar tombol */
+        height: 50px;  /* Tinggi tombol */
+        font-size: 16px;  /* Ukuran font */
+    }
+    .welcome-text {
+        font-size: 24px;
+        font-weight: bold;
     }
     </style>""", unsafe_allow_html=True)
     st.markdown("---")  # Garis pemisah
@@ -38,8 +45,12 @@ def main():
         navigate_to_contact()
 
 def navigate_to_home():
-    st.write("Selamat datang di Beranda")
-    st.write("Tambahkan konten Beranda di sini")
+    col1, col2, col3 = st.columns([1, 2, 1])  # Menentukan lebar kolom
+    col2.markdown("<div class='welcome-text'>Selamat datang di Aplikasi NLP!</div>", unsafe_allow_html=True)
+    with col2:
+        st.write("")  # Spasi kosong untuk memberi ruang antara teks dan tombol
+        if st.button("Navigate to Summary"):
+            navigate_to_summary()
 
 def navigate_to_summary():
     # Input teks pengguna
