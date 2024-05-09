@@ -16,16 +16,19 @@ def main():
     .stTextInput>div:first-child {
         background-color: #f0f0f0;
         padding: 40px;
+        font-family: 'inter';
     }
     .stTextInput>div:first-child>textarea {
         background-color: transparent !important;
+        font-family: 'inter';
     }
     .stButton>button {
-        background-color: #008080;
+        background-color: #615EF0;
         color: white;
         width: 150px;  /* Lebar tombol */
         height: 50px;  /* Tinggi tombol */
         font-size: 16px;  /* Ukuran font */
+        font-family: 'inter';
     }
     .welcome-text {
         font-size: 70px;
