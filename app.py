@@ -15,7 +15,7 @@ def main():
     st.markdown("""<style>
     .stTextInput>div:first-child {
         background-color: #f0f0f0;
-        padding: 10px;
+        padding: 40px;
     }
     .stTextInput>div:first-child>textarea {
         background-color: transparent !important;
@@ -23,7 +23,7 @@ def main():
     .stButton>button {
         background-color: #008080;
         color: white;
-        width: 200px;  /* Lebar tombol */
+        width: 150px;  /* Lebar tombol */
         height: 50px;  /* Tinggi tombol */
         font-size: 16px;  /* Ukuran font */
     }
@@ -68,12 +68,12 @@ def navigate_to_home():
 
 def navigate_to_summary():
     # Input teks pengguna
-    input_text = st.text_area("Masukkan teks untuk diringkas", height=200, 
+    input_text = st.text_area("Masukkan teks untuk diringkas", height=250, 
                               max_chars=10000, 
                               help="Anda dapat mengetik teks di sini")
 
     # Tombol untuk memproses teks
-    if st.button("Ringkaskan", 
+    if st.button("Kirim", 
                  help="Klik tombol ini untuk memproses teks dan melihat ringkasannya", 
                  key="summarize_button"):
         if input_text:
