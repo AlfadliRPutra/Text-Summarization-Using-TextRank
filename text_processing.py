@@ -9,6 +9,9 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import random
 import math
+nltk.download('punkt')
+
+
 
 factory = StemmerFactory()
 stemmer = factory.create_stemmer()
