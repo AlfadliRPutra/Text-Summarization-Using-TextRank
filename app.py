@@ -3,6 +3,16 @@ import hydralit_components as hc
 from text_processing import summarize_text
 
 def main():
+    # Navbar
+    menu_data = [
+        {'icon': "fas fa-home", 'label': "Beranda"},
+        {'icon': "fas fa-file-alt", 'label': "Summary"},
+        {'icon': "fas fa-book", 'label': "Tentang"},
+        {'icon': "fas fa-envelope", 'label': "Kontak"}
+    ]
+    menu_id = hc.nav_bar(menu_definition=menu_data, sticky_nav=True, sticky_mode='pinned')
+    
+    # Judul
     st.title("Peringkas Teks")
     st.markdown("""<style>
     .stTextInput>div:first-child {
@@ -19,14 +29,11 @@ def main():
     </style>""", unsafe_allow_html=True)
     st.markdown("---")  # Garis pemisah
     
-    # Navbar
-    menu_data = [
-        {'icon': "fas fa-home", 'label': "Beranda"},
-        {'icon': "fas fa-book", 'label': "Tentang"},
-        {'icon': "fas fa-envelope", 'label': "Kontak"}
-    ]
-    hc.nav_bar(menu_definition=menu_data, sticky_nav=True, sticky_mode='pinned')
-    
+    # Navigasi ke Summary saat item "Summary" diklik
+    if menu_id == "Summary":
+        navigate_to_summary()
+
+def navigate_to_summary():
     # Input teks pengguna
     input_text = st.text_area("Masukkan teks untuk diringkas", height=200, 
                               max_chars=10000, 
