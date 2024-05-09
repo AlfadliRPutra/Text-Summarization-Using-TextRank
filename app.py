@@ -28,14 +28,13 @@ def main():
         font-size: 16px;  /* Ukuran font */
     }
     .welcome-text {
-        font-size: 24px;
+        font-size: 75px;
         font-weight: bold;
     }
     .centered-button {
         text-align: center;
     }
     </style>""", unsafe_allow_html=True)
-    st.markdown("---")  # Garis pemisah
     
     # Navigasi ke menu yang dipilih
     if menu_id == "Beranda":
