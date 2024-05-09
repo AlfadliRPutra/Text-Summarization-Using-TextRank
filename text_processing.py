@@ -10,6 +10,13 @@ from sklearn.metrics.pairwise import cosine_similarity
 import random
 import math
 
+factory = StemmerFactory()
+stemmer = factory.create_stemmer()
+stop_factory = StopWordRemoverFactory()
+
+arrTdBaca = string.punctuation
+arrSwindo = stop_factory.get_stop_words()
+
 def bukannum(string):
     pattern = r"[^\d]+"
     return re.match(pattern, string) is not None
