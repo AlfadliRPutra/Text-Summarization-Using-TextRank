@@ -45,8 +45,8 @@ def preprocess(pre1):
 
 
 
+hasil_pre = pre1.apply(preprocess)
 
-from ast import If
 def create_graph(sentences, preprocessed_sentences):
   graph = nx.Graph()
 
@@ -65,16 +65,7 @@ def create_graph(sentences, preprocessed_sentences):
         graph.add_edge(i,j,weight=similarity)
   return graph
 
-teks = "Taiyuan (ANTARA) - Menurut sebuah laporan yang dirilis oleh Tongcheng Travel baru-baru ini, lebih dari 60 persen warga China yang disurvei menuturkan keinginan dan rencana mereka untuk melakukan wisata lintas perbatasan pada 2024, dan hal itu mencerminkan potensi pemulihan industri pariwisata, yang diiringi oleh sejumlah konsumsi terkait. Laporan tersebut juga menyebutkan bahwa kebijakan pembebasan visa yang diterapkan oleh beberapa negara juga berkontribusi pada pulihnya pariwisata mancanegara. Data dari platform pariwisata China Tuniu menunjukkan bahwa jumlah perjalanan lintas perbatasan yang dilakukan warga China saat lima hari masa liburan Hari Buruh yang berakhir pada 5 Mei, melonjak 190 persen secara tahunan (year on year). Ctrip, platform lainnya, mengungkapkan bahwa destinasi pariwisata lintas perbatasan pada periode liburan ini mencakup Daerah Administratif Khusus (Special Administrative Region/SAR) Hong Kong serta Makau di China selatan dan juga negara-negara yang tidak terlalu jauh lokasinya seperti Jepang, Korea Selatan, dan negara-negara Asia Tenggara. Wisatawan asal Beijing Zhan Long baru saja berwisata ke Thailand selama lima hari."
-teks1 = split_text(teks)
-print(teks1)
 
-graph = create_graph(teks1, hasil_pre)
-
-print(graph.edges)
-
-nx.draw_circular(graph, with_labels=True)
-plt.show()
 
 import random
 import math
@@ -137,9 +128,7 @@ def textrank(graph, d=0.85):
       break
   return nsimpul
 
-#contoh penggunaan
-graph = create_graph(teks1, hasil_pre)
-result = textrank(graph)
+
 
 for node in result:
   print('simpul', node[0])
