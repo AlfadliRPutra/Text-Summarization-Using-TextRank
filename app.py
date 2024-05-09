@@ -6,6 +6,10 @@ import string
 import nltk
 nltk.download('punkt')
 from nltk.tokenize import word_tokenize
+import networkx as nx
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+import matplotlib.pyplot as plt
 
 # Fungsi-fungsi preprocessing dan ringkasan dari skrip sebelumnya
 # Pastikan untuk menambahkan fungsi-fungsi tersebut di sini
@@ -40,10 +44,7 @@ def preprocess(pre1):
   return hasil
 
 
-import networkx as nx
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-import matplotlib.pyplot as plt
+
 
 from ast import If
 def create_graph(sentences, preprocessed_sentences):
