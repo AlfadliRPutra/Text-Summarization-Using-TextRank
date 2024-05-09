@@ -120,7 +120,7 @@ def get_sentences(graf):
     for node in graf:
         kalimat = node[1]['kalimat']
         sentences.append(kalimat)
-    return '. '.join(sentences)
+    return '. '.join(sentences) + ' '
 
 # Summarize text
 def summarize_text(text):
