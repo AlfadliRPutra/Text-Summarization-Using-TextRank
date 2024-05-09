@@ -41,7 +41,7 @@ def main():
         color: #888888;
     }
     .content {
-        margin: 0 40px;  /* Tambahkan margin kiri dan kanan sebesar 50px */
+        margin: 0 150px;  /* Tambahkan margin kiri dan kanan sebesar 50px */
     }
     </style>""", unsafe_allow_html=True)
     
