@@ -61,6 +61,8 @@ def create_graph(sentences, preprocessed_sentences):
                 graph.add_edge(i,j,weight=similarity)
     return graph
 
+toleransi = 1/10000
+debug = {'textrank': False, 'textrank2': False}
 def textrank(graph, d=0.85):
     nsimpul = []
     s = [random.randint(1,3) for x in range(len(graph.nodes))]
