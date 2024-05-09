@@ -147,8 +147,6 @@ def get_top_ranked_graphs(graf_list):
         top_ranked_graphs.append(top_ranked_nodes)
     return top_ranked_graphs
 
-hasil_perankingan = get_top_ranked_graphs(hasil_listSimpul)
-
 def get_sentences(graf):
     sentences = []
     for node in graf:
