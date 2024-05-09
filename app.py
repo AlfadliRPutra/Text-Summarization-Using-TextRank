@@ -31,6 +31,9 @@ def main():
         font-size: 24px;
         font-weight: bold;
     }
+    .centered-button {
+        text-align: center;
+    }
     </style>""", unsafe_allow_html=True)
     st.markdown("---")  # Garis pemisah
     
@@ -49,8 +52,7 @@ def navigate_to_home():
     col1.markdown("<div class='welcome-text'>Selamat datang di Aplikasi NLP!</div>", unsafe_allow_html=True)
     with col2:
         st.write("")  # Spasi kosong untuk memberi ruang antara teks dan tombol
-        if st.button("Navigate to Summary"):
-            navigate_to_summary()
+        st.markdown("<div class='centered-button'><button class='stButton'>Navigate to Summary</button></div>", unsafe_allow_html=True)
 
 def navigate_to_summary():
     # Input teks pengguna
