@@ -47,11 +47,13 @@ def main():
         navigate_to_contact()
 
 def navigate_to_home():
-    col1, col2= st.columns([2, 1])  # Menentukan lebar kolom
+    col1, col2 = st.columns([2, 1])  # Menentukan lebar kolom
     col1.markdown("<div class='welcome-text'>Selamat datang di Aplikasi NLP!</div>", unsafe_allow_html=True)
+    col1.markdown("<div style='font-size: 24px;'>Aplikasi ini merupakan implementasi dari Natural Language Processing (NLP) yang memanfaatkan metode Text Summarization menggunakan algoritma TextRank. Dengan menggunakan teknologi ini, Anda dapat memasukkan teks panjang dan mendapatkan ringkasan singkat yang mewakili inti dari teks tersebut. Ringkasan ini dapat sangat berguna untuk memahami teks yang kompleks, mengekstrak informasi penting, atau membuat konten yang lebih mudah dipahami.</div>", unsafe_allow_html=True)
     with col2:
         st.write("")  # Spasi kosong untuk memberi ruang antara teks dan tombol
         st.markdown("<div class='centered-button'><button class='stButton'>Navigate to Summary</button></div>", unsafe_allow_html=True)
+
 
 def navigate_to_summary():
     # Input teks pengguna
