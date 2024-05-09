@@ -12,8 +12,6 @@ def main():
     ]
     menu_id = hc.nav_bar(menu_definition=menu_data, sticky_nav=True, sticky_mode='pinned')
     
-    # Judul
-    st.title("Peringkas Teks")
     st.markdown("""<style>
     .stTextInput>div:first-child {
         background-color: #f0f0f0;
@@ -29,9 +27,19 @@ def main():
     </style>""", unsafe_allow_html=True)
     st.markdown("---")  # Garis pemisah
     
-    # Navigasi ke Summary saat item "Summary" diklik
-    if menu_id == "Summary":
+    # Navigasi ke menu yang dipilih
+    if menu_id == "Beranda":
+        navigate_to_home()
+    elif menu_id == "Summary":
         navigate_to_summary()
+    elif menu_id == "Tentang":
+        navigate_to_about()
+    elif menu_id == "Kontak":
+        navigate_to_contact()
+
+def navigate_to_home():
+    st.write("Selamat datang di Beranda")
+    st.write("Tambahkan konten Beranda di sini")
 
 def navigate_to_summary():
     # Input teks pengguna
@@ -49,6 +57,14 @@ def navigate_to_summary():
             st.write(summary)
         else:
             st.warning("Masukkan teks terlebih dahulu")
+
+def navigate_to_about():
+    st.write("Ini adalah halaman Tentang")
+    st.write("Tambahkan konten Tentang di sini")
+
+def navigate_to_contact():
+    st.write("Ini adalah halaman Kontak")
+    st.write("Tambahkan konten Kontak di sini")
 
 if __name__ == "__main__":
     st.set_page_config(layout='wide')  # Set layout ke 'wide' untuk full screen
