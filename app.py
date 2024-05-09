@@ -28,11 +28,17 @@ def main():
         font-size: 16px;  /* Ukuran font */
     }
     .welcome-text {
-        font-size: 75px;
+        font-size: 60px;
         font-weight: bold;
     }
     .centered-button {
         text-align: center;
+    }
+    .copyright {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 50px;
+        color: #888888;
     }
     </style>""", unsafe_allow_html=True)
     
@@ -48,11 +54,12 @@ def main():
 
 def navigate_to_home():
     col1, col2 = st.columns([2, 1])  # Menentukan lebar kolom
-    col1.markdown("<div class='welcome-text'>Selamat datang di Aplikasi NLP!</div>", unsafe_allow_html=True)
+    col1.markdown("<div class='welcome-text'>Selamat datang di AlphaSum</div>", unsafe_allow_html=True)
     col1.markdown("<div style='font-size: 24px;'>Aplikasi ini merupakan implementasi dari Natural Language Processing (NLP) yang memanfaatkan metode Text Summarization menggunakan algoritma TextRank. Dengan menggunakan teknologi ini, Anda dapat memasukkan teks panjang dan mendapatkan ringkasan singkat yang mewakili inti dari teks tersebut. Ringkasan ini dapat sangat berguna untuk memahami teks yang kompleks, mengekstrak informasi penting, atau membuat konten yang lebih mudah dipahami.</div>", unsafe_allow_html=True)
     with col2:
         st.write("")  # Spasi kosong untuk memberi ruang antara teks dan tombol
         st.markdown("<div class='centered-button'><button class='stButton'>Navigate to Summary</button></div>", unsafe_allow_html=True)
+    add_copyright()
 
 
 def navigate_to_summary():
@@ -71,14 +78,23 @@ def navigate_to_summary():
             st.write(summary)
         else:
             st.warning("Masukkan teks terlebih dahulu")
+    
+    add_copyright()
 
 def navigate_to_about():
     st.write("Ini adalah halaman Tentang")
     st.write("Tambahkan konten Tentang di sini")
+    add_copyright()
 
 def navigate_to_contact():
     st.write("Ini adalah halaman Kontak")
     st.write("Tambahkan konten Kontak di sini")
+    add_copyright()
+
+def add_copyright():
+    st.markdown("<div class='copyright'>© 2024 Hak Cipta oleh Budi</div>", unsafe_allow_html=True)
+
+
 
 if __name__ == "__main__":
     st.set_page_config(layout='wide')  # Set layout ke 'wide' untuk full screen
