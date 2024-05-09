@@ -28,7 +28,7 @@ def main():
         font-size: 16px;  /* Ukuran font */
     }
     .welcome-text {
-        font-size: 60px;
+        font-size: 70px;
         font-weight: bold;
     }
     .centered-button {
@@ -92,7 +92,7 @@ def navigate_to_contact():
     add_copyright()
 
 def add_copyright():
-    st.markdown("<div class='copyright'>© 2024 Hak Cipta oleh Budi</div>", unsafe_allow_html=True)
+    st.markdown("<div class='copyright'>© 2024 Alfadli R. P</div>", unsafe_allow_html=True)
 
 
 
